@@ -1,4 +1,17 @@
 <oglasi>
-<oglas>
-</oglas>
+    <oglas>
+        <KategorijaOglasa tip="alati"></KategorijaOglasa>
+        <DatumIsteka>
+            <Dan>15</Dan>
+            <Mesec>09</Mesec>
+            <Godina>2023</Godina>
+        </DatumIsteka>
+        <Cena valuta="din">20000</Cena>
+        <TekstOglasa>Motorna Testera NOVO</TekstOglasa>
+        <Oznaka>Motorna Testera</Oznaka>
+        <Oznaka>Demon Pro</Oznaka>
+        <Oznaka>4.4 KS</Oznaka>
+        <Email tip="sluzbeni">milosnrt219@gs.viser.edu.rs</Email>
+        <Email tip="privatni">mlskukolj007@gmail.com</Email>
+    </oglas>
 </oglasi>
