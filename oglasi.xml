@@ -13,7 +13,10 @@
         <Oznaka>Motorna Testera</Oznaka>
         <Oznaka>Demon Pro</Oznaka>
         <Oznaka>4.4 KS</Oznaka>
-        <Email tip="sluzbeni">milosnrt219@gs.viser.edu.rs</Email>
-        <Email tip="privatni">mlskukolj007@gmail.com</Email>
+        <Email>
+            <Kontakt tip="sluzbeni">milosnrt@gmail.com</Kontakt>
+            <Kontakt tip="privatni">milos@gmail.com</Kontakt>
+        </Email>
+        
     </oglas>
 </oglasi>
