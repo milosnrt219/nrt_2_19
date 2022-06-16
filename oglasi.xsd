@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:mstns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="oglasi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="oglas" type="oglas" maxOccurs="unbounded"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="oglas">
+    <xs:sequence>
+      <xs:element name="KategorijaOglasa" type="KategorijaOglasa"></xs:element>
+      <xs:element name="DatumIsteka" type="DatumIsteka"></xs:element>
+      <xs:element name="Cena" type="Cena"></xs:element>
+      <xs:element name="TekstOglasa" type="TekstOglasa"></xs:element>
+      <xs:element name="Oznaka" type="Oznaka"></xs:element>
+      <xs:element name="Email" type="Email"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="KategorijaOglasa">
+    <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="tip">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="alati"/>
+                            <xs:enumeration value="automobili"/>
+                            <xs:enumeration value="stanovi"/>
+                            <xs:enumeration value="poducavanje"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+  </xs:complexType>
+  
+
+  <xs:complexType name="DatumIsteka">
+    <xs:sequence>
+      <xs:element name="Dan">
+        <xs:simpleType>
+          <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1"></xs:minInclusive>
+            <xs:maxInclusive value="31"></xs:maxInclusive>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Mesec">
+        <xs:simpleType>
+          <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1"></xs:minInclusive>
+            <xs:maxInclusive value="12"></xs:maxInclusive>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Godina" type="xs:positiveInteger"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+<xs:complexType name="Cena">
+  <xs:simpleContent>
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1"></xs:minInclusive>
+            <xs:maxInclusive value="2000000"></xs:maxInclusive>
+    </xs:restriction>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="TekstOglasa">
+  <xs:simpleContent>
+    <xs:restriction base="xs:string">
+      <xs:minInclusive value="10"></xs:minInclusive>
+            <xs:maxInclusive value="180"></xs:maxInclusive>
+    </xs:restriction>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="Oznaka">
+  <xs:simpleContent>
+    <xs:restriction base="xs:string">
+      <xs:minInclusive value="1"></xs:minInclusive>
+            <xs:maxInclusive value="30"></xs:maxInclusive>
+    </xs:restriction>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="Email">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z]{1,20}[@][a-zA-Z]{4,8}(\.com$)"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
