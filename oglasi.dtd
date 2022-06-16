@@ -8,8 +8,9 @@
 <!ELEMENT Cena (#PCDATA)>
 <!ELEMENT TekstOglasa (#PCDATA)>
 <!ELEMENT Oznaka (#PCDATA)>
-<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Email (Kontakt+)>
+<!ELEMENT Kontakt (#PCDATA)>
 
 <!ATTLIST KategorijaOglasa tip (alati|automobili|stanovi|poducavanje) #REQUIRED>
 <!ATTLIST Cena valuta (din|eur|usd) "din">
-<!ATTLIST Email tip (sluzbeni|privatni) #REQUIRED>
+<!ATTLIST Kontakt tip (sluzbeni|privatni) #REQUIRED>
